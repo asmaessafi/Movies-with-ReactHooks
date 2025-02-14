@@ -115,12 +115,12 @@
 
 /* Default: 4 columns */
 .movie-grid {
-  margin: 15px 50px;
+  margin: 35px 70px;
   border: 1px groove aliceblue;
   border-radius: 10px;
   padding: 20px;
   display: grid;
-  gap: 20px;
+  gap: 35px;
   justify-items: center;
 background-color: rgba(42, 53, 74, 0.593);}
 
@@ -145,7 +145,7 @@ background-color: rgba(42, 53, 74, 0.593);}
 /* Large screens: 4 columns */
 @media (min-width: 1024px) {
   .movie-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
@@ -153,15 +153,16 @@ background-color: rgba(42, 53, 74, 0.593);}
 
 /* Card container */
 .film-card {
-  width: 300px;
+  width: auto;
   border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 39rem;
+  height: 30rem;
   background-color: #020111a4;
+  padding-bottom: 5px;
 }
 
 .film-card:hover {
@@ -172,7 +173,7 @@ background-color: rgba(42, 53, 74, 0.593);}
 /* Film poster */
 .film-poster {
   width: 100%;
-  height: 27rem;
+  height: 20rem;
   display: block;
 }
 
@@ -212,3 +213,48 @@ background-color: rgba(42, 53, 74, 0.593);}
   font-weight: bold;
 }
 
+.trailer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.button-trailer{
+  margin: 20px;
+  padding: 6px;
+  border-radius: 7px;
+  background-color: rgba(86, 142, 150, 0.338);
+  color: #d8dbbb;
+  border: none;
+  font-weight: 600;
+}
+
+.button-trailer:hover{
+  box-shadow: 10px 10px 15px rgba(5, 0, 52, 0.56);
+  font-weight: 800;
+}
+
+.iframe-trailer{
+  margin-top: -30px;
+ border-radius:10px ;
+ border : 2px solid aliceblue ;
+
+}
+.span-trailer{
+  font-family: Georgia, serif; 
+  margin: 15px 250px;
+  margin-top: 40px;
+  border : 1px groove aliceblue ;
+  border-radius: 10px;
+  background-color: rgba(42, 53, 74, 0.593);
+  padding: 20px;
+  color: rgb(221, 221, 192);
+
+}
+
+.trailer-title{
+  margin-bottom: 50px;
+  color: rgb(221, 221, 192);
+  box-shadow: 15px 15px 20px rgba(5, 0, 52, 0.56);
+}

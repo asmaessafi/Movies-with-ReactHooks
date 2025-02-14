@@ -3,7 +3,7 @@ const Addmovie = ({ onChangeForm ,addFilm ,newMovie,newMovieArray ,setnewMovie})
 
   const handleAdd=(e)=>{
   e.preventDefault()
-  if(newMovie.title && newMovie.description && newMovie.posterURL && newMovie.rating){
+  if(newMovie.title && newMovie.description && newMovie.posterURL && newMovie.rating && newMovie.trailer){
   addFilm(
     {...newMovie,
       id: newMovieArray.length + 1,
@@ -13,7 +13,8 @@ const Addmovie = ({ onChangeForm ,addFilm ,newMovie,newMovieArray ,setnewMovie})
       title:'',
       description:'',
       posterURL:'',
-      rating:''
+      rating:'',
+      trailer: ''
     })}
   }
 
@@ -21,7 +22,7 @@ const Addmovie = ({ onChangeForm ,addFilm ,newMovie,newMovieArray ,setnewMovie})
   
   return (
     <div>
-      <form className="form" onSubmit={handleAdd}>
+      <form className="form" onSubmit={handleAdd} >
         <input
           type="text"
           className="form-input"
@@ -57,6 +58,15 @@ const Addmovie = ({ onChangeForm ,addFilm ,newMovie,newMovieArray ,setnewMovie})
           step="0.1"
           onChange={onChangeForm}
           value={newMovie.rating}
+        />
+
+        <input
+          type="text"
+          className="form-input"
+          name="trailer"
+          placeholder="Enter trailer link"
+          onChange={onChangeForm}
+          value={newMovie.trailer}
         />
 
         <button className="form-button" type="submit">Publish Movie</button>
