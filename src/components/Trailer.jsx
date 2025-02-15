@@ -3,8 +3,7 @@ import { Link , useParams} from 'react-router-dom'
 
 const Trailer = ({filtred}) => {
     const{id}=useParams()
-    const array=filtred.filter(movie => movie.id.toString() === id)
-    const displayed=array[0]
+    const displayed=filtred.find(movie => movie.id.toString() === id)
     if(displayed){
         return (
         <div>
